@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Maát · Tameana del Corazón — Vivir en Presencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/main.css">
+<style>
+.session-hero{
+  min-height:78vh;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#F5F5E8;
+  padding:160px var(--pad-x) 100px;
+  overflow:hidden;isolation:isolate;
+}
+.session-hero-bg{
+  position:absolute;inset:0;z-index:-2;
+  background:#1a3a23 url("../assets/cuarzo-luz-arcoiris.jpg") center 30%/cover no-repeat;
+}
+.session-hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(30,46,32,.52) 0%,rgba(20,40,24,.80) 100%);
+}
+.session-hero-inner{
+  max-width:780px;display:flex;flex-direction:column;align-items:center;gap:28px;
+}
+.session-label{
+  font-family:var(--f-body);font-weight:500;font-size:11px;
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:rgba(245,245,232,.75);
+  display:flex;align-items:center;gap:14px;
+}
+.session-label::before,.session-label::after{content:"";width:28px;height:1px;background:currentColor;opacity:.6}
+.session-hero h1{
+  color:#F5F5E8;font-size:clamp(52px,7vw,90px);
+  line-height:1.0;letter-spacing:-0.015em;
+  text-shadow:0 2px 30px rgba(0,0,0,.2);
+}
+.session-hero .sub-title{
+  font-family:var(--f-body);font-weight:300;font-size:13px;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(245,245,232,.65);margin-top:-14px;
+}
+.session-hero .tagline{
+  font-family:var(--f-body);font-weight:300;
+  font-size:clamp(17px,1.5vw,20px);line-height:1.7;
+  color:rgba(245,245,232,.85);max-width:520px;text-wrap:balance;
+}
+.session-hero-glyph{width:72px;height:72px;color:rgba(169,197,165,.7);margin-bottom:8px}
+
+.breadcrumb{
+  font-family:var(--f-body);font-size:13px;font-weight:300;
+  color:var(--color-text-soft);display:flex;align-items:center;gap:10px;
+  padding:24px var(--pad-x);max-width:var(--max);margin:0 auto;
+}
+.breadcrumb a{color:var(--color-secondary);transition:color .3s ease}
+.breadcrumb a:hover{color:var(--color-accent)}
+.breadcrumb span{opacity:.5}
+
+.desc-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);
+  gap:clamp(48px,7vw,100px);align-items:start;
+}
+@media(max-width:900px){.desc-grid{grid-template-columns:1fr}}
+
+.benefits-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.benefits-list li{
+  display:flex;align-items:flex-start;gap:20px;
+  padding:18px 0;border-bottom:1px solid rgba(125,158,127,.25);
+  font-size:16px;line-height:1.6;color:var(--color-text);
+}
+.benefits-list li:first-child{border-top:1px solid rgba(125,158,127,.25)}
+.benefit-icon{
+  flex:0 0 32px;width:32px;height:32px;border-radius:50%;
+  background:var(--color-mint);display:flex;align-items:center;justify-content:center;
+  color:var(--color-primary);margin-top:2px;
+}
+.benefit-icon svg{width:14px;height:14px}
+.foot-grid{grid-template-columns:1.2fr 1fr 1fr 1fr}
+@media(max-width:880px){.foot-grid{grid-template-columns:1fr}}
+
+.how-bg{background:var(--color-bg-alt)}
+.steps{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:clamp(24px,3vw,40px);margin-top:clamp(40px,5vw,64px);
+}
+@media(max-width:700px){.steps{grid-template-columns:1fr}}
+.step{background:rgba(245,245,232,.6);border:1px solid rgba(125,158,127,.2);padding:32px 28px;display:flex;gap:20px}
+.step-num{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:36px;line-height:1;color:var(--color-mint);flex:0 0 auto;margin-top:-4px}
+.step-body h4{font-family:var(--f-body);font-weight:500;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-primary);margin:0 0 8px}
+.step-body p{margin:0;font-size:15px;line-height:1.7;color:var(--color-text-soft)}
+
+.sidebar{position:sticky;top:120px}
+.sidebar-card{background:var(--color-bg-alt);border:1px solid rgba(125,158,127,.3);padding:36px 32px;display:flex;flex-direction:column;gap:22px}
+.sidebar-card h4{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:26px;color:var(--color-primary);margin:0}
+.sidebar-meta{display:flex;flex-direction:column;gap:10px}
+.sidebar-row{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;border-bottom:1px solid rgba(125,158,127,.2);padding-bottom:10px}
+.sidebar-row:last-child{border-bottom:0;padding-bottom:0}
+.sidebar-row .key{font-weight:500;letter-spacing:0.06em;color:var(--color-text-soft);font-size:11px;text-transform:uppercase}
+.sidebar-row .val{color:var(--color-text);text-align:right}
+
+.other-sessions{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,2.5vw,32px)}
+@media(max-width:700px){.other-sessions{grid-template-columns:1fr}}
+.other-card{border:1px solid rgba(125,158,127,.25);padding:28px 26px;transition:background .4s ease,border-color .4s ease,transform .4s ease}
+.other-card:hover{background:rgba(245,245,232,.8);border-color:rgba(125,158,127,.5);transform:translateY(-3px)}
+.other-card .num{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:48px;line-height:1;color:var(--color-mint);margin-bottom:8px}
+.other-card h3{font-size:clamp(22px,2vw,28px);margin-bottom:4px}
+.other-card .sub{font-family:var(--f-body);font-style:normal;font-weight:300;font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-text-soft);display:block;margin-bottom:16px}
+.other-card p{font-size:14.5px;color:var(--color-text-soft);line-height:1.6;margin-bottom:20px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="../index.html" aria-label="Vivir en Presencia">
+    <img class="brand-logo" src="../assets/logo-vivir-en-presencia.png" alt="Vivir en Presencia"/>
+  </a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="../index.html#tameana">La práctica</a>
+    <a href="../index.html#sesiones">Sesiones</a>
+    <a href="../index.html#july">Quién soy</a>
+    <a href="../index.html#faq">Preguntas</a>
+  </nav>
+  <a class="nav-cta" href="../index.html#reservar">Reservar</a>
+</header>
+
+<!-- HERO -->
+<section class="session-hero">
+  <div class="session-hero-bg" aria-hidden="true"></div>
+  <div class="session-hero-inner reveal">
+    <svg class="session-hero-glyph" viewBox="0 0 72 72" fill="none" stroke="currentColor" stroke-width=".8" aria-hidden="true">
+      <polygon points="36,6 62,21 62,51 36,66 10,51 10,21"/>
+      <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" opacity=".55"/>
+      <polygon points="36,30 42,33.5 42,40.5 36,44 30,40.5 30,33.5" opacity=".3"/>
+    </svg>
+    <div class="session-label">Sesión 02 · Vivir en Presencia</div>
+    <h1>Maát</h1>
+    <p class="sub-title">Tameana del Corazón</p>
+    <p class="tagline">Abre tu corazón sagrado y reconecta con el amor que eres en esencia.</p>
+    <a href="../index.html#reservar" class="btn">Reservar esta sesión</a>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="../index.html">Inicio</a>
+  <span>→</span>
+  <a href="../index.html#sesiones">Sesiones</a>
+  <span>→</span>
+  <span style="color:var(--color-text)">Maát</span>
+</div>
+
+<main>
+
+<!-- DESCRIPTION -->
+<section>
+  <div class="wrap">
+    <div class="desc-grid">
+
+      <div class="reveal">
+        <span class="eyebrow">La práctica</span>
+        <h2 class="h2" style="margin:18px 0 28px">¿Qué es Maát?</h2>
+
+        <div class="body">
+          <p><em>Maát</em> es una sesión individual para aperturar el espacio sagrado del corazón como puerta de consciencia y comprensión. Utiliza una estructura vibracional del hexágono, que representa la conexión cielo y tierra en armonía. Su propósito más profundo: traer el alma al cuerpo para que se ancle en el corazón.</p>
+
+          <p>Abre el corazón para conectar con el AMOR que ERES en esencia. Es una puerta que abre nuestra consciencia al flujo natural del Universo. Una sensación de calma y realización se hace presente al finalizar la sesión.</p>
+
+          <p>Podés realizarla como sesión única, pero al ser una práctica más intensa también podés combinarla con sesiones de Salush Nahié para profundizar el proceso.</p>
+        </div>
+
+        <div class="pullquote" style="margin-top:36px">
+          <p class="quote">"Dios encontrándose con Dios. El encuentro con tu esencia divina."</p>
+          <cite>— Descripción de la práctica</cite>
+        </div>
+
+        <h3 class="h3" style="margin:48px 0 28px;font-size:clamp(22px,2vw,28px)">Principales beneficios</h3>
+
+        <ul class="benefits-list">
+          <li>
+            <div class="benefit-icon"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5"/></svg></div>
+            <span><strong style="display:block;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--color-primary)">Apertura del corazón</strong>Libera bloqueos o traumas alojados en el espacio sagrado del corazón.</span>
+          </li>
+          <li>
+            <div class="benefit-icon"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5"/></svg></div>
+            <span><strong style="display:block;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--color-primary)">Duelos, depresiones y separaciones</strong>Ideal para procesos de pérdida, separaciones y experiencias difíciles.</span>
+          </li>
+          <li>
+            <div class="benefit-icon"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5"/></svg></div>
+            <span><strong style="display:block;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--color-primary)">Encuentro con la esencia divina</strong>El alma se ancla en el corazón y reconecta con su naturaleza más pura.</span>
+          </li>
+          <li>
+            <div class="benefit-icon"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5"/></svg></div>
+            <span><strong style="display:block;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--color-primary)">Conexión con el propósito del alma</strong>Alineación al ser superior y unión interna del ser completo.</span>
+          </li>
+          <li>
+            <div class="benefit-icon"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5"/></svg></div>
+            <span><strong style="display:block;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--color-primary)">Apertura al flujo del universo</strong>La consciencia se abre al flujo natural y armónico de todo lo que existe.</span>
+          </li>
+          <li>
+            <div class="benefit-icon"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="7,1 13,4.5 13,9.5 7,13 1,9.5 1,4.5"/></svg></div>
+            <span><strong style="display:block;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--color-primary)">Calma y realización</strong>Una sensación profunda de paz y completitud se instala al finalizar.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar reveal">
+        <div class="sidebar-card">
+          <h4>Reservar<br/>Maát</h4>
+          <div class="sidebar-meta">
+            <div class="sidebar-row"><span class="key">Duración</span><span class="val">30 — 40 minutos</span></div>
+            <div class="sidebar-row"><span class="key">Modalidad</span><span class="val">A distancia · Online</span></div>
+            <div class="sidebar-row"><span class="key">Formato</span><span class="val">Sesión individual</span></div>
+            <div class="sidebar-row"><span class="key">Se combina con</span><span class="val">Salush Nahié</span></div>
+          </div>
+          <a href="../index.html#reservar" class="btn" style="width:100%;text-align:center;justify-content:center">Reservar por WhatsApp</a>
+          <a href="../index.html#reservar" class="link-soft" style="text-align:center;display:block">→ Escribirme por Instagram</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-bg">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow center">Cómo funciona</span>
+      <h2 class="h2">Cómo prepararte para<br/>recibir la sesión</h2>
+    </header>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h4>Espacio y postura</h4>
+          <p>Buscá un lugar cómodo donde recostarte sin interrupciones. No necesitás nada especial: tu cama, tu sillón, una manta en el piso. El cuerpo descansado facilita la recepción.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h4>Agua transparente</h4>
+          <p>Tené un vaso transparente de agua al iniciar. Las moléculas del agua son muy sensibles a los estímulos vibracionales y ayudan al proceso de desintoxicación. Lo tomás al finalizar.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h4>Temperatura corporal</h4>
+          <p>Es probable que tu temperatura corporal disminuya durante la sesión. La recomendación es mantenerte abrigado/a desde el inicio.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h4>Entrega y apertura</h4>
+          <p>Al ser una práctica más intensa, llegá con corazón abierto y disposición de ir profundo. Cada experiencia es única. Lo que sea que emerja, es exactamente lo que necesitás.</p>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:clamp(56px,6vw,80px)">
+      <p style="font-family:var(--f-quote);font-style:italic;font-size:clamp(18px,1.6vw,22px);color:var(--color-primary);max-width:580px;margin:0 auto 32px">Podés realizarla como sesión única. También podés combinarla con sesiones de Salush Nahié para un proceso más integrativo.</p>
+      <a href="../index.html#reservar" class="btn">Reservar sesión</a>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SESSIONS -->
+<section>
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow center">También te puede interesar</span>
+      <h2 class="h2">Otras sesiones</h2>
+    </header>
+    <div class="other-sessions">
+      <a href="salush-nahie.html" class="other-card reveal">
+        <div class="num">01</div>
+        <h3>Salush Nahié<span class="sub">Triángulo Sagrado</span></h3>
+        <p>El portal ancestral que equilibra y armoniza tu campo energético completo. Ciclo de 3 sesiones.</p>
+        <span class="link-cta">Ver sesión →</span>
+      </a>
+      <a href="origenes.html" class="other-card reveal">
+        <div class="num">03</div>
+        <h3>Orígenes<span class="sub">Activación del Corazón</span></h3>
+        <p>La sesión más potente para despertar tu visión y alinearte con la voluntad de tu espíritu.</p>
+        <span class="link-cta">Ver sesión →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final" id="reservar">
+  <div class="cta-final-bg" aria-hidden="true"></div>
+  <div class="inner reveal">
+    <p class="ornament">"El corazón es la puerta. Maát te ayuda a abrirla."</p>
+    <h2 class="h2">¿Lista para abrir tu corazón?</h2>
+    <p class="lead">Escribime y coordinamos el momento perfecto para tu sesión de Maát — Tameana del Corazón.</p>
+    <div class="btn-row">
+      <a href="../index.html#reservar" class="btn ghost">Reservar por WhatsApp</a>
+      <a href="../index.html#reservar" class="link-soft">→ Escribirme por Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="../index.html" aria-label="Vivir en Presencia">
+        <img class="brand-logo" src="../assets/logo-vivir-en-presencia.png" alt="Vivir en Presencia" style="height:190px;filter:brightness(0) invert(1);opacity:.92"/>
+      </a>
+      <p>Terapia vibracional · Sesiones a distancia para todo el mundo hispanohablante.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#tameana">Qué es Tameana</a></li>
+        <li><a href="../index.html#july">Quién soy</a></li>
+        <li><a href="../index.html#testimonios">Testimonios</a></li>
+        <li><a href="../index.html#faq">Preguntas frecuentes</a></li>
+        <li><a href="../index.html#reservar">Reservar</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Sesiones</h4>
+      <ul>
+        <li><a href="salush-nahie.html">Salush Nahié</a></li>
+        <li><a href="maat.html">Maát</a></li>
+        <li><a href="origenes.html">Orígenes</a></li>
+        <li><a href="puja.html">Pūjā Grupal</a></li>
+        <li><a href="hama.html">H'ama · Espacios</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">Instagram · @vivirenpresencia</a></li>
+        <li><a href="#">WhatsApp · +54 11 ____ ____</a></li>
+        <li><a href="#">hola@vivirenpresencia.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <small>Vivir en Presencia © 2026 · Argentina</small>
+    <small>Práctica complementaria — no sustituye tratamiento médico ni psicológico.</small>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 30);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, {threshold:0.1, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Vivir en Presencia · Sesiones de Tameana a Distancia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+/* Index footer: 4 columns */
+.foot-grid{grid-template-columns:1.2fr 1fr 1fr 1fr}
+@media(max-width:880px){.foot-grid{grid-template-columns:1fr}}
+
+/* Index-specific overrides */
+.hero-bg{background:#1a3a23 url("assets/portada-gotas-naturaleza.jpg") center/cover no-repeat}
+.benefits::before{background-image:url("assets/diente-leon-luz.jpg")}
+.cta-final-bg{background:#1a3a23 url("assets/cuarzo-luz-arcoiris.jpg") center 22%/cover no-repeat !important}
+
+/* 5-session grid: flex wrap centered so last row of 2 is centered */
+.session-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(24px,2.5vw,36px);
+}
+.session{
+  flex:0 0 calc(33.333% - clamp(16px,1.7vw,24px));
+  min-width:280px;
+}
+@media(max-width:980px){
+  .session{flex:0 0 100%;min-width:unset}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Vivir en Presencia">
+    <img class="brand-logo" src="assets/logo-vivir-en-presencia.png" alt="Vivir en Presencia"/>
+  </a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#tameana">La práctica</a>
+    <a href="#sesiones">Sesiones</a>
+    <a href="#july">Quién soy</a>
+    <a href="#faq">Preguntas</a>
+  </nav>
+  <a class="nav-cta" href="#reservar">Reservar</a>
+</header>
+
+<main id="top">
+
+<!-- 1 · HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner reveal">
+    <span class="eyebrow" style="color:rgba(245,245,232,.85)">Vivir en Presencia</span>
+    <h1>
+      <span class="line">Sesiones de</span>
+      <span class="line"><em>Tameana</em></span>
+      <span class="line">a Distancia</span>
+    </h1>
+    <p class="tagline">Acompaño almas de todo el mundo a liberar,
+armonizar y recordar el AMOR.</p>
+    <div class="hero-ornament" aria-hidden="true">
+      <span class="line"></span>
+      <span>◆</span>
+      <span class="line"></span>
+    </div>
+    <a href="#reservar" class="btn">Reservar sesión</a>
+  </div>
+  <div class="scroll-ind" aria-hidden="true">
+    <span>Desplazarse</span>
+  </div>
+</section>
+
+<!-- 2 · TAMEANA -->
+<section id="tameana">
+  <div class="wrap">
+    <div class="split">
+      <div class="body reveal">
+        <span class="eyebrow">La práctica</span>
+        <h2 class="h2" style="margin-top:18px">¿Qué es Tameana?</h2>
+        <span class="chip">Terapia Vibracional Pleyadiana</span>
+        <p>Tameana es una terapia vibracional pleyadiana, canalizada por <em>Juan Manuel Giordano</em>, basada en la expansión de consciencia a través de múltiples frecuencias de luz. Combina cristales de cuarzo, geometría sagrada, símbolos como lenguaje de luz y agua como modulador de energía.</p>
+        <p>Durante una sesión, se armonizan los centros energéticos del ser —físico, mental, emocional y espiritual— generando transformaciones profundas en la percepción de la realidad. Tameana induce un viaje al interior: un proceso de autodescubrimiento libre de conceptos e ideas limitantes.</p>
+        <div class="pullquote">
+          <p class="quote">"Solo vos podés soltarte de lo que ya no te sirve. Yo soy puente. La transformación es tuya."</p>
+          <cite>— July</cite>
+        </div>
+        <a href="#sesiones" class="link-soft">→ Ver las sesiones disponibles</a>
+      </div>
+      <div class="tameana-img-wrap reveal">
+        <img src="assets/tameana-geometria-sagrada.jpg" alt="Geometría sagrada de Tameana en arena con cristales de cuarzo" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · SESSIONS -->
+<section id="sesiones" class="sessions-bg">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow center">Las sesiones</span>
+      <h2 class="h2">Encontrá tu camino</h2>
+      <p class="kicker">Tres sesiones distintas.
+Una sola intención: que recuerdes el amor que eres.</p>
+    </header>
+
+    <div class="session-grid">
+
+      <article class="session reveal">
+        <span class="session-num">01</span>
+        <svg class="session-glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" aria-hidden="true">
+          <path d="M24 6 L42 38 L6 38 Z"/>
+          <path d="M24 14 L34 32 L14 32 Z" opacity=".5"/>
+        </svg>
+        <h3>Salush Nahié<span class="sub">Triángulo Sagrado</span></h3>
+        <p class="tagline">El portal ancestral que equilibra y armoniza tu campo energético completo.</p>
+        <hr/>
+        <ul>
+          <li>Equilibrio y armonía de chakras</li>
+          <li>Liberación de bloqueos físicos, emocionales, mentales y espirituales</li>
+          <li>Activación de ADN · Equilibrio de hemisferios cerebrales</li>
+        </ul>
+        <div class="duration">45 — 60 min <span class="dot">·</span> Ciclo de 3 sesiones</div>
+        <a href="sesiones/salush-nahie.html" class="link-cta">Ver sesión →</a>
+      </article>
+
+      <article class="session reveal">
+        <span class="session-num">02</span>
+        <svg class="session-glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="24,6 40,15 40,33 24,42 8,33 8,15"/>
+          <polygon points="24,14 32,19 32,29 24,34 16,29 16,19" opacity=".5"/>
+        </svg>
+        <h3>Maát<span class="sub">Tameana del Corazón</span></h3>
+        <p class="tagline">Abre tu corazón sagrado y reconecta con el amor que eres en esencia.</p>
+        <hr/>
+        <ul>
+          <li>Apertura y sanación del corazón</li>
+          <li>Duelos, depresiones y separaciones</li>
+          <li>Conexión con el propósito del alma</li>
+        </ul>
+        <div class="duration">30 — 40 min <span class="dot">·</span> Sesión individual</div>
+        <a href="sesiones/maat.html" class="link-cta">Ver sesión →</a>
+      </article>
+
+      <article class="session reveal">
+        <span class="session-num">03</span>
+        <svg class="session-glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <circle cx="24" cy="24" r="18"/>
+          <circle cx="24" cy="24" r="9" opacity=".5"/>
+          <circle cx="24" cy="24" r="2.6" fill="currentColor" stroke="none"/>
+        </svg>
+        <h3>Orígenes<span class="sub">Activación del Corazón</span></h3>
+        <p class="tagline">La sesión más potente para despertar tu visión y alinearte con tu espíritu.</p>
+        <hr/>
+        <ul>
+          <li>Activación de la glándula timo</li>
+          <li>Liberación de experiencias de vidas pasadas</li>
+          <li>Despertar de la visión y el propósito</li>
+        </ul>
+        <div class="duration">20 — 30 min <span class="dot">·</span> Sesión individual</div>
+        <a href="sesiones/origenes.html" class="link-cta">Ver sesión →</a>
+      </article>
+
+      <article class="session reveal">
+        <span class="session-num">04</span>
+        <svg class="session-glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <circle cx="24" cy="24" r="20"/>
+          <circle cx="24" cy="8"  r="3" fill="currentColor" stroke="none" opacity=".7"/>
+          <circle cx="38" cy="16" r="3" fill="currentColor" stroke="none" opacity=".7"/>
+          <circle cx="38" cy="32" r="3" fill="currentColor" stroke="none" opacity=".7"/>
+          <circle cx="24" cy="40" r="3" fill="currentColor" stroke="none" opacity=".7"/>
+          <circle cx="10" cy="32" r="3" fill="currentColor" stroke="none" opacity=".7"/>
+          <circle cx="10" cy="16" r="3" fill="currentColor" stroke="none" opacity=".7"/>
+        </svg>
+        <h3>Pūjā<span class="sub">Sesión Grupal</span></h3>
+        <p class="tagline">En la comunión del grupo la energía se expande, atrayendo lo más alineado a nuestra vida.</p>
+        <hr/>
+        <ul>
+          <li>Transformación del corazón colectivo</li>
+          <li>Elevar el campo vibratorio grupal</li>
+          <li>Atraer circunstancias favorables</li>
+        </ul>
+        <div class="duration">45 — 60 min <span class="dot">·</span> Sesión grupal</div>
+        <a href="sesiones/puja.html" class="link-cta">Ver sesión →</a>
+      </article>
+
+      <article class="session reveal">
+        <span class="session-num">05</span>
+        <svg class="session-glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="24,4 44,15 44,33 24,44 4,33 4,15"/>
+          <polygon points="24,14 34,19.5 34,28.5 24,34 14,28.5 14,19.5" opacity=".5"/>
+          <circle cx="24" cy="24" r="2.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <h3>H'ama<span class="sub">Limpieza de Espacios</span></h3>
+        <p class="tagline">Liberá las energías que bloquean tu hogar o negocio y restaurá la armonía del espacio.</p>
+        <hr/>
+        <ul>
+          <li>Casas, negocios, terrenos y vehículos</li>
+          <li>Apertura de caminos en ventas o alquileres</li>
+          <li>Paz y bienestar para quienes habitan el espacio</li>
+        </ul>
+        <div class="duration">4 — 6 hs <span class="dot">·</span> Limpieza de espacio</div>
+        <a href="sesiones/hama.html" class="link-cta">Ver sesión →</a>
+      </article>
+
+    </div>
+
+    <div class="sessions-cta reveal">
+      <a href="#reservar" class="btn">Reservar sesión</a>
+      <small>Sesiones a distancia · Online · Para todo el mundo hispanohablante</small>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · JULY -->
+<section id="july" class="bio-section">
+  <div class="bio">
+    <div class="bio-img reveal">
+      <img src="assets/july-piramides-giza.jpg" alt="July en las pirámides de Giza, Egipto" loading="lazy"/>
+    </div>
+    <div class="bio-body" style="padding-top:var(--pad-y);padding-bottom:var(--pad-y);padding-right:var(--pad-x)">
+      <div class="reveal">
+        <span class="eyebrow">Quién soy</span>
+        <h2 class="h2" style="margin:18px 0 28px">Hola, soy July.</h2>
+        <div class="body">
+          <p>Mi camino comenzó como toda gran transformación: con una pregunta profunda. Quería encontrarme a mí misma, y esa búsqueda honesta me llevó por senderos de coaching, meditación, respiración consciente, astrología y prácticas energéticas.</p>
+          <p>En 2022, algo cambió para siempre. Al conectarme con la frecuencia de amor de <em>Tameana</em>, sentí que había recordado algo muy antiguo. No lo estaba aprendiendo por primera vez. Lo estaba <em>recordando</em>.</p>
+          <p>Desde ese despertar, viajé a lugares sagrados en todo el planeta. Hoy acompaño a personas de todo el mundo a través de sesiones a distancia. No vengo a darte nada que no tengas. Solo estoy aquí para ayudarte a recordar el amor que ya eres.</p>
+        </div>
+        <span class="signature">Con amor, July</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · BENEFITS -->
+<section class="benefits">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow center light">Lo que transforma</span>
+      <h2 class="h2">Lo que Tameana puede<br/>transformar en tu vida</h2>
+    </header>
+    <div class="benefits-grid">
+      <div class="benefit reveal"><span class="num">01</span><span class="label">Equilibrio y armonía de chakras</span></div>
+      <div class="benefit reveal"><span class="num">02</span><span class="label">Liberación de ansiedad, depresión y angustia</span></div>
+      <div class="benefit reveal"><span class="num">03</span><span class="label">Sanación de duelos y separaciones</span></div>
+      <div class="benefit reveal"><span class="num">04</span><span class="label">Claridad mental y equilibrio cerebral</span></div>
+      <div class="benefit reveal"><span class="num">05</span><span class="label">Activación de ADN y potencialidades latentes</span></div>
+      <div class="benefit reveal"><span class="num">06</span><span class="label">Conexión con el propósito del alma</span></div>
+      <div class="benefit reveal"><span class="num">07</span><span class="label">Liberación de patrones del pasado</span></div>
+      <div class="benefit reveal"><span class="num">08</span><span class="label">Relajación del cuerpo y reducción del estrés</span></div>
+      <div class="benefit reveal"><span class="num">09</span><span class="label">Apto para niños, mascotas y espacios físicos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · TESTIMONIALS CAROUSEL -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="testi-head section-head reveal" style="position:relative">
+      <span class="eyebrow center">Testimonios</span>
+      <h2 class="h2">Palabras que vienen<br/>del corazón</h2>
+      <div class="testi-fly" aria-hidden="true">
+        <img src="assets/mariposa-transformacion.jpg" alt=""/>
+      </div>
+    </div>
+
+    <div class="carousel" role="region" aria-label="Testimonios">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="testiTrack">
+
+          <article class="testi">
+            <blockquote>Descubrí Tameana a través de July, y lo recibí como una forma gentil y amorosa de conectar con mi esencia y el amor universal que reside en todos nosotros. Me dio orden, perspectiva y sanación desde la primera sesión.</blockquote>
+            <div>
+              <div class="testi-name">Lola Molina</div>
+              <div class="testi-city">Barcelona, España</div>
+              <div class="stars" aria-label="Cinco estrellas">★ ★ ★ ★ ★</div>
+            </div>
+          </article>
+
+          <article class="testi">
+            <blockquote>July, con toda su sabiduría y suavidad, te acompaña para que encuentres la llave que abre la comprensión de lo vivido desde el amor del corazón. Tras las sesiones todo es más liviano, más amable, más comprensible.</blockquote>
+            <div>
+              <div class="testi-name">Beatriz Tomey</div>
+              <div class="testi-city">Zaragoza, España</div>
+              <div class="stars" aria-label="Cinco estrellas">★ ★ ★ ★ ★</div>
+            </div>
+          </article>
+
+          <article class="testi">
+            <blockquote>He hecho varias sesiones con July y fue una experiencia de apertura máxima de paz y calma. Noté cómo empezó a moverse todo a mi alrededor y yo en el centro, más fiel a mi sentir.</blockquote>
+            <div>
+              <div class="testi-name">Yolanda</div>
+              <div class="testi-city">Barcelona, España</div>
+              <div class="stars" aria-label="Cinco estrellas">★ ★ ★ ★ ★</div>
+            </div>
+          </article>
+
+          <article class="testi">
+            <blockquote>Tameana me ha dado calma cuando más lo necesitaba. Siempre ha habido un antes y un después. Sentir esa paz, ese equilibrio, esa claridad tras la sesión convierte Tameana para mí en una experiencia sagrada para sanar.</blockquote>
+            <div>
+              <div class="testi-name">Foix Julià Saumell</div>
+              <div class="testi-city">Barcelona, España</div>
+              <div class="stars" aria-label="Cinco estrellas">★ ★ ★ ★ ★</div>
+            </div>
+          </article>
+
+          <article class="testi">
+            <blockquote>Juli tiene una calidez humana que atraviesa los cuerpos desde el amor para transformarlos. Sus sesiones son totalmente regenerativas para mí: me ayudan cuando estoy angustiada, me traen paz y me conectan conmigo.</blockquote>
+            <div>
+              <div class="testi-name">Maria Luz Hamparsomian</div>
+              <div class="testi-city">Valencia, España</div>
+              <div class="stars" aria-label="Cinco estrellas">★ ★ ★ ★ ★</div>
+            </div>
+          </article>
+
+          <article class="testi">
+            <blockquote>Siento que tu energía, tu dulzura y tu forma de acompañar hacen una diferencia enorme. Se nota cuando alguien hace lo que hace desde el corazón, y vos lo transmitís completamente.</blockquote>
+            <div>
+              <div class="testi-name">Florencia</div>
+              <div class="testi-city">Argentina</div>
+              <div class="stars" aria-label="Cinco estrellas">★ ★ ★ ★ ★</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="testiPrev" aria-label="Testimonios anteriores">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+        </button>
+        <div class="carousel-dots" id="testiDots" role="tablist" aria-label="Ir a página de testimonios"></div>
+        <button class="carousel-btn" id="testiNext" aria-label="Siguientes testimonios">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3l5 5-5 5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · FAQ -->
+<section id="faq" class="faq-bg">
+  <div class="wrap">
+    <div class="faq-grid">
+      <header class="section-head reveal">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="h2">Todo lo que necesitás<br/>saber antes de empezar</h2>
+      </header>
+      <div class="faq-list reveal" id="faqList">
+        <div class="faq-item open">
+          <button class="faq-q" type="button" aria-expanded="true">
+            <span>¿Qué es Tameana?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Tameana es una terapia vibracional pleyadiana, canalizada por Juan Manuel Giordano, basada en la expansión de consciencia a través de múltiples frecuencias de luz. Combina cristales de cuarzo, geometría sagrada y agua como modulador de energía para armonizar el ser completo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Cómo funciona una sesión a distancia?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Te recostás cómodo/a en tu hogar, abrigado/a y con un vaso transparente de agua. Yo trabajo desde mi espacio realizando la práctica completa. La vibración no conoce límites geográficos. Muchas personas reportan sensaciones físicas y emocionales durante la sesión. Cada experiencia es única y personal.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Qué necesito para recibir la sesión?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Solo necesitás un espacio cómodo donde recostarte, ropa abrigada (la temperatura corporal puede bajar durante la sesión) y un vaso transparente de agua. Al finalizar, tomás el agua — las moléculas son muy sensibles a los estímulos vibracionales y ayudan al proceso de desintoxicación.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Cuántas sesiones necesito?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Para Salush Nahié se recomienda un ciclo de 3 sesiones para un proceso integrativo completo. Maát y Orígenes pueden realizarse como sesión única. La mayoría siente cambios perceptibles desde la primera sesión. Te propongo empezar con una y decidir juntos cómo continuar.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Puedo combinar sesiones?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Sí. Maát (Tameana del Corazón) se combina muy bien con sesiones de Salush Nahié. Orígenes es una práctica avanzada y se recomienda haber recibido alguna otra sesión de Tameana con anterioridad. Durante nuestra conversación podemos diseñar el camino más adecuado para vos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Tameana sirve para la ansiedad y la depresión?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Sí, puede ser un gran acompañante en esos procesos. Libera bloqueos energéticos que contribuyen a esos estados, generando calma y mayor equilibrio. Es una práctica complementaria — no reemplaza tratamiento médico ni psicológico.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Pueden hacerla niños y mascotas?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Sí. Tameana es especialmente efectiva para niños, que perciben la energía sin filtros. También es muy adecuada para mascotas. La sesión se adapta en duración y enfoque según las necesidades.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>¿Cómo me contacto para reservar?</span><span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a"><p>Podés escribirme directamente por WhatsApp o Instagram. Coordinamos el día y horario que mejor te quede, acordamos la sesión y listo. No necesitás preparación especial — solo llegar con apertura y ganas de recordar quién sos.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · FINAL CTA -->
+<section class="cta-final" id="reservar">
+  <div class="cta-final-bg" aria-hidden="true"></div>
+  <div class="inner reveal">
+    <p class="ornament">"El AMOR que eres
+no necesita ser encontrado.
+Solo recordado."</p>
+    <h2 class="h2">¿Lista para empezar tu camino?</h2>
+    <p class="lead">Cada sesión es única y personal. Escribime y encontramos el momento perfecto para comenzar tu proceso de armonización.</p>
+    <div class="btn-row">
+      <a href="#" class="btn ghost">Reservar por WhatsApp</a>
+      <a href="#" class="link-soft">→ Escribirme por Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="#top" aria-label="Vivir en Presencia">
+        <img class="brand-logo" src="assets/logo-vivir-en-presencia.png" alt="Vivir en Presencia" style="height:190px;filter:brightness(0) invert(1);opacity:.92"/>
+      </a>
+      <p>Terapia vibracional · Sesiones a distancia para todo el mundo hispanohablante.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="#top">Inicio</a></li>
+        <li><a href="#tameana">Qué es Tameana</a></li>
+        <li><a href="#july">Quién soy</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#reservar">Reservar</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Sesiones</h4>
+      <ul>
+        <li><a href="sesiones/salush-nahie.html">Salush Nahié</a></li>
+        <li><a href="sesiones/maat.html">Maát</a></li>
+        <li><a href="sesiones/origenes.html">Orígenes</a></li>
+        <li><a href="sesiones/puja.html">Pūjā Grupal</a></li>
+        <li><a href="sesiones/hama.html">H'ama · Espacios</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">Instagram · @vivirenpresencia</a></li>
+        <li><a href="#">WhatsApp · +54 11 ____ ____</a></li>
+        <li><a href="#">hola@vivirenpresencia.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <small>Vivir en Presencia © 2026 · Argentina</small>
+    <small>Práctica complementaria — no sustituye tratamiento médico ni psicológico.</small>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 30);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hero + CTA parallax
+  const heroBg = document.querySelector('.hero-bg');
+  const ctaBg  = document.querySelector('.cta-final-bg');
+  const reduce  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          if (heroBg) heroBg.style.transform = `scale(1.06) translate3d(0,${y * 0.18}px,0)`;
+          if (ctaBg) {
+            const rect = ctaBg.parentElement.getBoundingClientRect();
+            ctaBg.style.transform = `scale(1.06) translate3d(0,${-(window.innerHeight - rect.top) * 0.08}px,0)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, {passive:true});
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      q.setAttribute('aria-expanded', String(open));
+    });
+  });
+
+  // ——— TESTIMONIAL CAROUSEL ———
+  (function() {
+    const track   = document.getElementById('testiTrack');
+    const dotsEl  = document.getElementById('testiDots');
+    const btnPrev = document.getElementById('testiPrev');
+    const btnNext = document.getElementById('testiNext');
+    const cards   = Array.from(track.children);
+    let current   = 0;
+    let perView   = getPerView();
+
+    function getPerView() { return window.innerWidth >= 980 ? 3 : 1; }
+    function totalSlides() { return Math.ceil(cards.length / perView); }
+
+    function buildDots() {
+      dotsEl.innerHTML = '';
+      const n = totalSlides();
+      for (let i = 0; i < n; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'carousel-dot' + (i === current ? ' active' : '');
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-label', `Página ${i + 1} de testimonios`);
+        btn.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(btn);
+      }
+    }
+
+    function setCardWidth() {
+      const gap = parseFloat(getComputedStyle(track).gap) || 28;
+      const vp  = track.parentElement.offsetWidth;
+      const w   = perView > 1 ? (vp - gap * (perView - 1)) / perView : vp;
+      cards.forEach(c => { c.style.flex = `0 0 ${w}px`; });
+    }
+
+    function goTo(n) {
+      const max = totalSlides() - 1;
+      current = Math.max(0, Math.min(n, max));
+      const gap  = parseFloat(getComputedStyle(track).gap) || 28;
+      const cardW = cards[0].offsetWidth;
+      track.style.transform = `translateX(-${current * (cardW + gap) * perView}px)`;
+      dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === max;
+    }
+
+    function init() {
+      perView = getPerView();
+      setCardWidth();
+      buildDots();
+      goTo(current);
+    }
+
+    btnPrev.addEventListener('click', () => goTo(current - 1));
+    btnNext.addEventListener('click', () => goTo(current + 1));
+
+    // Auto-advance every 6 s
+    let autoTimer = setInterval(() => {
+      goTo(current < totalSlides() - 1 ? current + 1 : 0);
+    }, 6000);
+    track.parentElement.addEventListener('mouseenter', () => clearInterval(autoTimer));
+    track.parentElement.addEventListener('mouseleave', () => {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current < totalSlides() - 1 ? current + 1 : 0), 6000);
+    });
+
+    // Touch swipe
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
+    });
+
+    // Responsive
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const newPer = getPerView();
+        if (newPer !== perView) { current = 0; }
+        init();
+      }, 200);
+    });
+
+    init();
+  })();
+</script>
+</body>
+</html>

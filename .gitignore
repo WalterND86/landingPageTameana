@@ -1,0 +1,8 @@
+# Archivos de trabajo / referencias
+Referencias Personales para Página Tameana/
+extracted/
+*.zip
+
+# Sistema
+.DS_Store
+Thumbs.db
