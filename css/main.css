@@ -338,7 +338,7 @@ section.tight{padding:calc(var(--pad-y)*.85) 0}
 }
 .signature{
   font-family:var(--f-quote);font-style:italic;font-weight:400;font-size:30px;
-  color:var(--color-primary);margin-top:24px;transform:rotate(-2deg);display:inline-block;
+  color:var(--color-primary);margin-top:24px;display:block;
 }
 .signature::before{
   content:"";display:inline-block;width:36px;height:1px;
