@@ -87,12 +87,18 @@
 }
 .foot-grid{grid-template-columns:1.2fr 1fr 1fr 1fr}
 @media(max-width:880px){.foot-grid{grid-template-columns:1fr}}
+@media(max-width:880px){body{padding-bottom:72px}}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav" id="nav">
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+    <span class="hb-line"></span>
+  </button>
   <a class="brand" href="../index.html" aria-label="Vivir en Presencia">
     <img class="brand-logo" src="../assets/logo-vivir-en-presencia.png" alt="Vivir en Presencia"/>
   </a>
@@ -104,6 +110,27 @@
   </nav>
   <a class="nav-cta" href="../index.html#reservar">Reservar</a>
 </header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <nav class="drawer-main">
+    <a href="../index.html#tameana" class="drawer-link">La práctica</a>
+    <a href="../index.html#sesiones" class="drawer-link">Sesiones</a>
+    <a href="../index.html#july" class="drawer-link">Quién soy</a>
+    <a href="../index.html#testimonios" class="drawer-link">Testimonios</a>
+    <a href="../index.html#faq" class="drawer-link">Preguntas</a>
+    <a href="../index.html#reservar" class="drawer-link">Reservar</a>
+    <p class="drawer-label">Las sesiones</p>
+    <a href="salush-nahie.html" class="drawer-sub-link">01 · Salush Nahí</a>
+    <a href="maat.html" class="drawer-sub-link">02 · Ma'at</a>
+    <a href="origenes.html" class="drawer-sub-link">03 · Orígenes</a>
+    <a href="puja.html" class="drawer-sub-link">04 · Pūjā Grupal</a>
+    <a href="hama.html" class="drawer-sub-link">05 · H'ama</a>
+    <div class="drawer-cta-row">
+      <a href="https://wa.me/34664876244?text=Hola%20July%2C%20me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n%20de%20Tameana." target="_blank" class="btn" style="width:100%;text-align:center;justify-content:center">Reservar por WhatsApp</a>
+    </div>
+  </nav>
+</div>
 
 <!-- HERO -->
 <section class="session-hero">
@@ -197,6 +224,7 @@
             <div class="sidebar-row"><span class="key">Formato</span><span class="val">Sesión individual</span></div>
             <div class="sidebar-row"><span class="key">Nivel</span><span class="val">Práctica avanzada</span></div>
             <div class="sidebar-row"><span class="key">Requisito</span><span class="val">Sesión previa recomendada</span></div>
+            <div class="sidebar-row"><span class="key">Precio</span><span class="val">55 €</span></div>
           </div>
           <a href="https://wa.me/34664876244?text=Hola%20July%2C%20me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n%20de%20Tameana." target="_blank" class="btn" style="width:100%;text-align:center;justify-content:center">Reservar por WhatsApp</a>
           <a href="https://www.instagram.com/vivir.enpresencia" target="_blank" class="link-soft" style="text-align:center;display:block">→ Escribirme por Instagram</a>
@@ -350,6 +378,54 @@
     }
   }, {threshold:0.1, rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hamburger menu
+  (function(){
+    const btn = document.getElementById('hamburger');
+    const drawer = document.getElementById('mobile-drawer');
+    if(!btn || !drawer) return;
+    btn.addEventListener('click', function(){
+      const open = this.classList.toggle('is-open');
+      drawer.classList.toggle('is-open', open);
+      drawer.setAttribute('aria-hidden', String(!open));
+      this.setAttribute('aria-expanded', String(open));
+      this.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        btn.classList.remove('is-open');
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Abrir menú');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
 </script>
+<!-- MOBILE SESSION STRIP -->
+<nav class="session-strip" aria-label="Navegar entre sesiones">
+  <a href="salush-nahie.html" class="ss-pill">
+    <span class="ss-num">01</span>
+    <span class="ss-name">Salush Nahí</span>
+  </a>
+  <a href="maat.html" class="ss-pill">
+    <span class="ss-num">02</span>
+    <span class="ss-name">Ma'at</span>
+  </a>
+  <a href="origenes.html" class="ss-pill is-active">
+    <span class="ss-num">03</span>
+    <span class="ss-name">Orígenes</span>
+  </a>
+  <a href="puja.html" class="ss-pill">
+    <span class="ss-num">04</span>
+    <span class="ss-name">Pūjā</span>
+  </a>
+  <a href="hama.html" class="ss-pill">
+    <span class="ss-num">05</span>
+    <span class="ss-name">H'ama</span>
+  </a>
+</nav>
 </body>
 </html>
