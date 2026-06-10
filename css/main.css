@@ -494,7 +494,7 @@ section.tight{padding:calc(var(--pad-y)*.85) 0}
 }
 .cta-final-bg{
   position:absolute;inset:0;z-index:-2;
-  background:#1a3a23 url("../assets/cuarzo-luz-arcoiris.jpg") center 22%/cover no-repeat;
+  background:#1a3a23 url("../assets/cuarzo-luz-arcoiris.webp") center 22%/cover no-repeat;
   transform:scale(1.04);
 }
 .cta-final::before{
