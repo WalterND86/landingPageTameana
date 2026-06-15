@@ -10,3 +10,7 @@ Thumbs.db
 # Node
 node_modules/
 npm-debug.log*
+
+# Reportes Lighthouse (auditorías locales)
+lighthouse-report*.json
+lh-run*.json
